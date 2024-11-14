@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SEA - Viaggio in Asia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="sidebar">
+        <h3 onclick="toggleVisibility('itineraryList')" class="collapsed">Itinerario del Viaggio <span class="arrow">›</span></h3>
+        <ul id="itineraryList" class="hidden">
+            <li onclick="zoomToLocation([10.762622, 106.660172], 10)">1. Ho Chi Minh City (7th - 9th Dec)</li>
+            <li onclick="zoomToLocation([16.0544, 108.2022], 10)">2. Da Nang (9th - 11th Dec)</li>
+            <li onclick="zoomToLocation([15.8800584, 108.3380469], 10)">3. Hoi An (11th - 14th Dec)</li>
+            <li onclick="zoomToLocation([21.028511, 105.804817], 10)">4. Hanoi (14th - 16th Dec)</li>
+            <li onclick="zoomToLocation([20.910051, 107.183902], 10)">5. Ha Long Bay (16th - 18th Dec)</li>
+            <li onclick="zoomToLocation([18.787747, 98.993128], 10)">6. Chiang Mai (18th - 21st Dec)</li>
+            <li onclick="zoomToLocation([8.0863, 98.9063], 10)">7. Krabi (21st - 24th Dec)</li>
+            <li onclick="zoomToLocation([10.0952, 99.8393], 10)">8. Koh Tao (24th - 28th Dec)</li>
+            <li onclick="zoomToLocation([9.5120, 100.0137], 10)">9. Ko Samui (28th - 31st Dec)</li>
+            <li onclick="zoomToLocation([13.7563, 100.5018], 10)">10. Bangkok (31st Dec - 2nd Jan)</li>
+            <li onclick="zoomToLocation([14.5995, 120.9842], 10)">11. Manila (2nd - 3rd Jan)</li>
+            <li onclick="zoomToLocation([12.9214, 123.6714], 10)">12. Donsol (3rd - 6th Jan)</li>
+            <li onclick="zoomToLocation([11.9952, 120.2007], 10)">13. Coron (6th - 9th Jan)</li>
+            <li onclick="zoomToLocation([11.1875, 119.3952], 10)">14. El Nido (9th - 11th Jan)</li>
+            <li onclick="zoomToLocation([9.7392, 118.7352], 10)">15. Puerto Princessa (11th - 13th Jan)</li>
+            <li onclick="zoomToLocation([-8.4095, 115.1889], 10)">16. Ubud (13th - 17th Jan)</li>
+            <li onclick="zoomToLocation([-8.3496, 116.0451], 10)">17. Gili T (17th - 22nd Jan)</li>
+        </ul>
+        <h3 onclick="toggleVisibility('transportsList')" class="collapsed">Trasporti <span class="arrow">›</span></h3>
+        <ul id="transportsList" class="hidden">
+            <li onclick="highlightPolyline(0)">1-2: Flight (HCM -> DAN)</li>
+            <li onclick="highlightPolyline(1)">2-3: Bus to Hoi An</li>
+            <li onclick="highlightPolyline(2)">3-4: Bus to Da Nang Airport, Flight to Hanoi</li>
+            <li onclick="highlightPolyline(3)">4-5: Bus to Ha Long Bay</li>
+            <li onclick="highlightPolyline(4)">5-6: Cruise to Ha Long Bay</li>
+            <li onclick="highlightPolyline(5)">6-7: Flight AirAsia (Hanoi -> Chiang Mai)</li>
+            <li onclick="highlightPolyline(6)">7-8: Flight (Chiang Mai -> Krabi)</li>
+            <li onclick="highlightPolyline(7)">8-9: Bus+Ferry (Krabi -> Koh Tao)</li>
+            <li onclick="highlightPolyline(8)">9-10: Ferry (Koh Tao -> Ko Samui)</li>
+            <li onclick="highlightPolyline(9)">10-11: Bus to Bangkok</li>
+            <li onclick="highlightPolyline(10)">11-12: Flight to Manila</li>
+            <li onclick="highlightPolyline(11)">12-13: Boat to Coron</li>
+            <li onclick="highlightPolyline(12)">13-14: Bus to El Nido</li>
+            <li onclick="highlightPolyline(13)">14-15: Bus to Puerto Princessa</li>
+            <li onclick="highlightPolyline(14)">15-16: Flight to Bali</li>
+            <li onclick="highlightPolyline(15)">16-17: Boat to Gili T</li>
+            <li onclick="highlightPolyline(16)">17-End: Flight to Sydney</li>
+        </ul>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
